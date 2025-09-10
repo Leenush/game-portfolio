@@ -43,9 +43,21 @@ body {
   }
   
   /* Sections */
-  section {
+  /* section {
     padding: 3em;
-  }
+    
+  } */
+   section {
+    width: 80%;              
+    max-width: 1500px;
+    margin: 60px auto;      
+    text-align: left;       
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4); 
+    border-radius: 12px;
+  }  
+
+  
   
   /* Game cards */
   .game-card {
@@ -77,4 +89,144 @@ body {
     color: #ff5722;
     text-shadow: 0px 0px 8px #fff;
   }
+
+  /* General button style */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  /* Play Online button */
+  .play-btn {
+    background: linear-gradient(135deg, #4cafef, #1e88e5);
+    color: white;
+    box-shadow: 0 4px 8px rgba(30, 136, 229, 0.4);
+  }
+  .play-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(30, 136, 229, 0.6);
+  }
+  
+  /* Download button */
+  .download-btn {
+    background: linear-gradient(135deg, #66bb6a, #43a047);
+    color: white;
+    box-shadow: 0 4px 8px rgba(67, 160, 71, 0.4);
+  }
+  .download-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(67, 160, 71, 0.6);
+  }
+  
+  /* Game cards layout */
+  /* Games section grid */
+/* Games section: vertical stacking */
+#games {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* space between cards */
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+  /* Game card styling */
+  /* Game card styling */
+.game-card {
+    background: #111;
+    width: 50%;
+    padding: 90px;                  /* bigger padding */
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    color: white;
+    max-width: 1200px;              /* double width */
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Hover effect */
+  .game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(255,235,59,0.5);
+  }
+  
+  /* Media container (image + trailer) */
+  .media {
+    position: relative;
+    width: 100px;
+    height: 300px;  
+    max-width: 800px;               /* double size for media */
+    margin: 0 auto 20px;
+  }
+  
+  .thumbnail, .trailer {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+  }
+  
+  .trailer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+  
+  .media:hover .trailer {
+    opacity: 1;
+  }
+  
+  .media:hover .thumbnail {
+    opacity: 0;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 15px 30px;             /* bigger buttons */
+    font-size: 20px;
+  }
+  
+  /* Zig-zag alignment remains the same */
+  .game-card:nth-child(odd) {
+    align-self: flex-start;
+    text-align: left;
+  }
+  .game-card:nth-child(even) {
+    align-self: flex-end;
+    text-align: right;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 1024px) {
+    .game-card {
+      max-width: 100%;
+      padding: 30px;
+      text-align: left !important;
+      align-self: flex-start !important;
+    }
+  
+    .media {
+      max-width: 100%;
+      max-width: 800px;    /* same max width for all cards */
+      margin-bottom: 25px;
+      flex-shrink: 0; 
+    }
+  
+    .btn {
+      padding: 12px 25px;
+      font-size: 18px;
+    }
+  }
+  
+  
+  
   
