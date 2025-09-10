@@ -6,14 +6,15 @@
   <title>YonsOlina's Game Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<canvas id="sparkles"></canvas>
-<script src="sparkles.js"></script>
-</body>
-</html>
-
 <body>
+  <!-- Sparkles effect -->
+  <canvas id="sparkles"></canvas>
+  <script src="sparkles.js"></script>
+  <script src="trailers.js"></script>
+
+  <!-- Header -->
   <header>
-    <h1>YonsOlina's Game Portfolio</h1>
+    <h1>YonsOlina's Games</h1>
     <nav>
       <a href="#about">About</a>
       <a href="#games">Games</a>
@@ -21,21 +22,70 @@
     </nav>
   </header>
 
+  <!-- About Section -->
   <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! we're YonsOlina, game developers passionate about creating fun and interactive experiences.</p>
+    <h2>About Us</h2>
+    <p>Hello! We're YonsOlina, game developers passionate about creating fun and interactive experiences.</p>
   </section>
 
+  <!-- Games Section -->
   <section id="games">
-    <h2>My Games</h2>
+    <h2>Our Games</h2>
+
+    <!-- Game 1 (left) -->
     <div class="game-card">
-      <img src="thumbnail.jpg" alt="Game thumbnail" width="300">
-      <h3>My First Unity Game</h3>
-      <p>A fun project made with Unity.</p>
-      <a href="#">Play Online</a> | <a href="#">Download</a>
+      <div class="media">
+        <img src="game1-thumbnail.jpg" alt="Game 1 thumbnail" class="thumbnail">
+        <video class="trailer" muted loop>
+          <source src="game1-trailer.mp4" type="video/mp4">
+        </video>
+      </div>
+      <h3>Game Title 1</h3>
+      <p>A fun Unity project with exciting gameplay and mechanics.</p>
+      <div class="buttons">
+        <a href="Game1/index.html" target="_blank" class="btn play-btn">Play Online</a>
+        <a href="Game1.zip" download class="btn download-btn">Download</a>
+      </div>
+      <p><em>(Coming soon – links will work after upload)</em></p>
     </div>
+
+    <!-- Game 2 (right) -->
+    <div class="game-card">
+      <div class="media">
+        <img src="game2-thumbnail.jpg" alt="Game 2 thumbnail" class="thumbnail">
+        <video class="trailer" muted loop>
+          <source src="game2-trailer.mp4" type="video/mp4">
+        </video>
+      </div>
+      <h3>Game Title 2</h3>
+      <p>A 3D adventure game full of mystery and exploration.</p>
+      <div class="buttons">
+        <a href="Game2/index.html" target="_blank" class="btn play-btn">Play Online</a>
+        <a href="Game2.zip" download class="btn download-btn">Download</a>
+      </div>
+      <p><em>(Coming soon – links will work after upload)</em></p>
+    </div>
+
+    <!-- Game 3 (left) -->
+    <div class="game-card">
+      <div class="media">
+        <img src="game3-thumbnail.jpg" alt="Game 3 thumbnail" class="thumbnail">
+        <video class="trailer" muted loop>
+          <source src="game3-trailer.mp4" type="video/mp4">
+        </video>
+      </div>
+      <h3>Game Title 3</h3>
+      <p>An exciting new adventure game full of challenges and fun.</p>
+      <div class="buttons">
+        <a href="Game3/index.html" target="_blank" class="btn play-btn">Play Online</a>
+        <a href="Game3.zip" download class="btn download-btn">Download</a>
+      </div>
+      <p><em>(Coming soon – links will work after upload)</em></p>
+    </div>
+
   </section>
 
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: yourmail@example.com</p>
