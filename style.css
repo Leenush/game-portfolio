@@ -135,27 +135,81 @@ body {
     padding: 20px;
   }
   
-  /* Game card styling */
-  /* Game card styling */
+/* .iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 62.5%; /* 960 / 600 aspect ratio 
+  margin-top: 20px;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+} */
+/* Container for responsive iframe */
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 62.5%; /* 960 / 600 aspect ratio */
+  margin-top: 20px;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+/* Game card styling (keep your current design) */
 .game-card {
+  background: #111;
+  padding: 2em;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(255,235,59,0.5);
+}
+
+/* .game-card {
     background: #111;
     width: 50%;
-    padding: 90px;                  /* bigger padding */
+    padding: 90px;                  /* bigger padding 
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.6);
     color: white;
-    max-width: 1200px;              /* double width */
+    max-width: 1200px;              /* double width 
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   
-  /* Hover effect */
+  /* Hover effect 
   .game-card:hover {
     transform: scale(1.05);
     box-shadow: 0 12px 25px rgba(255,235,59,0.5);
-  }
+  } */
   
   /* Media container (image + trailer) */
   .media {
@@ -196,14 +250,14 @@ body {
   }
   
   /* Zig-zag alignment remains the same */
-  .game-card:nth-child(odd) {
+  /* .game-card:nth-child(odd) {
     align-self: flex-start;
     text-align: left;
   }
   .game-card:nth-child(even) {
     align-self: flex-end;
     text-align: right;
-  }
+  } */
   
   /* Mobile responsiveness */
   @media (max-width: 1024px) {
