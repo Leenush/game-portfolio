@@ -214,16 +214,21 @@ body {
   /* Media container (image + trailer) */
   .media {
     position: relative;
-    width: 100px;
+    width: 400px;
     height: 300px;  
-    max-width: 800px;               /* double size for media */
-    margin: 0 auto 20px;
+    max-width: 800px;              
+    margin: 0 auto;   /* centers the container horizontally */
+    justify-content: center; /* horizontal center of content */
+    align-items: center;     /* vertical center of content if needed */
   }
   
   .thumbnail, .trailer {
-    width: 100%;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
     border-radius: 12px;
     display: block;
+    object-position: center;
   }
   
   .trailer {

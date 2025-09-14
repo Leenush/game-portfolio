@@ -106,9 +106,8 @@
         <div class="media">
           <img src="game1-thumbnail.jpg" alt="Game 1 thumbnail" class="thumbnail">
           <video class="trailer" muted loop>
-            <source src="Video Promotion.mp4" type="video/mp4">
+            <source src="Video_Promotion.mp4" type="video/mp4">
           </video>
-          <button class="play-video-btn">▶ Play with Sound</button>
         </div>
     
         <h3>Craft warzone</h3>
@@ -116,7 +115,7 @@
     
         <div class="buttons">
           <!-- Opens Itch.io in a new tab -->
-          <a href="https://lina-slassi.itch.io/craft-warzone" target="_blank" class="btn play-btn">
+          <a href="https://leenush.itch.io/craft-warzone" target="_blank" class="btn play-btn">
             Play Online
           </a>
     
@@ -136,5 +135,21 @@
     <h2>Contact</h2>
     <p>Email: yonsolina.games@gmail.com</p>
   </section>
+
+  <script>
+    document.querySelectorAll(".media").forEach(media => {
+      const video = media.querySelector(".trailer");
+  
+      media.addEventListener("mouseenter", () => {
+        video.currentTime = 0;
+        video.play();
+      });
+  
+      media.addEventListener("mouseleave", () => {
+        video.pause();
+      });
+    });
+    </script>
+
 </body>
 </html>
