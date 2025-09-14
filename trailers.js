@@ -10,4 +10,14 @@ document.querySelectorAll(".media").forEach(media => {
       video.pause();
     });
   });
+
+  document.querySelectorAll(".play-video-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      const video = button.previousElementSibling;
+      video.muted = false;
+      video.play();
+      button.style.display = "none";
+    });
+  });
+  
   
